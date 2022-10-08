@@ -1,17 +1,20 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { Route, Routes } from "react-router-dom";
+
 import "./App.css";
+import Home from "./Components/Home";
+import Lobby from "./Components/Lobby";
 
 function App() {
   const [count, setCount] = useState(0);
 
+  const handlePlay = () => {};
+
   return (
-    <div className="App">
-      <form>
-        <input type="text" name="player" placeholder="faz teu nome champs" />
-        <input type="button" value="Jogar" className="nes-btn is-success"/>
-      </form>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/lobby" element={<Lobby />} />
+    </Routes>
   );
 }
 

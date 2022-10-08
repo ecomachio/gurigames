@@ -1,7 +1,7 @@
 function Lobby() {
   return (
     <div className="App">
-      <h1>Lobby</h1>
+      <h1>Procurando oponente...</h1>
     </div>
   );
 }

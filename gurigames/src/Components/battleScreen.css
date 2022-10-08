@@ -1,0 +1,27 @@
+
+
+.arena {
+ background-image: url("battleBackgroud.png");
+ background-repeat: no-repeat;
+ background-size: 100%;
+ width: 100vh;
+ height: 100vh;
+}
+
+.playerOne{
+    border: 1px solid green;
+    width: 150px;
+    height: 150px;
+}
+
+.playerTwo{
+    border: 1px solid red;
+    width: 150px;
+    height: 150px;
+}
+
+.actionPanel{
+    border: 1px solid red;
+    width: 150px;
+    height: 150px;
+}

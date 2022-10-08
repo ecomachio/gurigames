@@ -16,6 +16,7 @@ function App() {
       <Route path="/lobby" element={<Lobby />} />
     </Routes>
   );
+  
 }
 
 export default App;

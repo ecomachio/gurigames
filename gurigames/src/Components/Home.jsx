@@ -9,14 +9,12 @@ function Home() {
 
   return (
     <div className="App">
+      <h1>
+        <span className="nes-text is-warning">Faz teu nome, Champs!</span>
+      </h1>
       <form>
-        <input type="text" name="player" placeholder="faz teu nome champs" />
-        <input
-          type="button"
-          value="Jogar"
-          onClick={handlePlay}
-          className="nes-btn is-success"
-        />
+        <input type="text" name="player" placeholder="Escolha um nome..." />
+        <input type="button" onClick={handlePlay} value="Jogar" className="nes-btn is-success" />
       </form>
     </div>
   );

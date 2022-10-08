@@ -5,13 +5,26 @@
   padding-top: 300px;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-body{
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+}
+
+body {
   background: url(field-background.png);
   height: 100vh;
   background-position: center;

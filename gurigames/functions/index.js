@@ -1,7 +1,11 @@
 const AWS = require("aws-sdk");
+const { v4: uuidv4 } = require("uuid");
 
 const dynamo = new AWS.DynamoDB.DocumentClient();
 const TABLE_NAME = "user";
+const STATUS = {
+  ONLINE: "ONLINE",
+};
 exports.handler = async (event, context) => {
   let body;
   let statusCode = 200;
@@ -11,6 +15,20 @@ exports.handler = async (event, context) => {
 
   try {
     switch (event.routeKey) {
+      case "POST /join":
+        const id = uuidv4(); 
+        const join = JSON.parse(event.body);
+        await dynamo
+          .put({
+            TableName: TABLE_NAME,
+            Item: {
+              id: id,
+              name: join.name,
+              status: STATUS.ONLINE,
+            },
+          })
+          .promise();
+        break;
       case "DELETE /user/{id}":
         await dynamo
           .delete({
